@@ -1,5 +1,5 @@
 TN:
-SF:bin/gendiff.js
+SF:src/gendiff.js
 FN:4,(anonymous_0)
 FN:6,(anonymous_1)
 FN:11,(anonymous_2)
@@ -36,7 +36,7 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:bin/parsers.js
+SF:src/parsers.js
 FN:5,(anonymous_0)
 FN:7,(anonymous_1)
 FNF:2

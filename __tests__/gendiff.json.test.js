@@ -1,5 +1,5 @@
 import path from 'path';
-import genDiff from '../bin/gendiff.js';
+import genDiff from '../src/gendiff.js';
 
 const __dirname = path.resolve();
 
