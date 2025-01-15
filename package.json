@@ -13,9 +13,9 @@
   "license": "ISC",
   "author": "SKiryanov",
   "type": "module",
-  "main": "bin/gendiff.js",
+  "main": "src/gendiff.js",
   "bin": {
-    "frontend-project-46": "src/gendiff.js"
+    "gendiff": "bin/index.js"
   },
   "scripts": {
     "test": "jest",
@@ -35,6 +35,7 @@
   "dependencies": {
     "commander": "^13.0.0",
     "js-yaml": "^4.1.0",
+    "link": "^2.1.1",
     "lodash": "^4.17.21"
   }
 }

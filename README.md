@@ -33,3 +33,4 @@
 [![asciicast](https://asciinema.org/a/TQWIBMnvOKVPRjDybaNvCNUmG.svg)](https://asciinema.org/a/TQWIBMnvOKVPRjDybaNvCNUmG)
 
 ### Поиск различий между двумя плоскими yaml файлами
+[![asciicast](https://asciinema.org/a/dBvqnshzjHbldemoiTDTpTuRs.svg)](https://asciinema.org/a/dBvqnshzjHbldemoiTDTpTuRs)
