@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import getParsedData from './parsers.js';
+import getParsedData from './getParsedData.js';
 
 const getSortedObjectByKeys = (object) => _.fromPairs(_.sortBy(_.toPairs(object), 0));
 
