@@ -4,10 +4,13 @@ import genDiff from '../src/gendiff.js';
 
 program
   .name('gendiff')
-  .description('Compress two configuration files and shows a difference.')
+  .description('Compares two configuration files and shows a difference.')
   .version('0.0.1')
-  .option('-f, --format [type]', 'output format')
+  .option('-f, --format [type]', 'output format', 'stylish')
   .arguments('<filepath1> <filepath2>')
-  .action(genDiff);
+  .action((filepath1, filepath2, options) => {
+    const result = genDiff(filepath1, filepath2, options.format);
+    console.log(result);
+  });
 
 program.parse();
