@@ -16,7 +16,7 @@ test('stylish', () => {
     - key3: oldValue3
     + key3: newValue3
       key4: value4
-      key5: {q
+      key5: {
         + nestedKey1: nestedValue1
     }
 }`;
