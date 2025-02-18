@@ -6,8 +6,8 @@ const __dirname = path.resolve();
 const getFixturePath = (filename) => path.join(__dirname, '', '__fixtures__', filename);
 
 test('genDiff', () => {
-  const expectedData = `
-  common: {
+  const expectedData = `{
+    common: {
       + follow: false
         setting1: Value 1
       - setting2: 200
@@ -49,7 +49,7 @@ test('genDiff', () => {
         }
         fee: 100500
     }
-  `;
+  }`;
   const filePath1 = getFixturePath('file1.json');
   const filePath2 = getFixturePath('file2.json');
   const actualData = genDiff(filePath1, filePath2);
