@@ -34,3 +34,6 @@
 
 ### Поиск различий между двумя плоскими yaml файлами
 [![asciicast](https://asciinema.org/a/dBvqnshzjHbldemoiTDTpTuRs.svg)](https://asciinema.org/a/dBvqnshzjHbldemoiTDTpTuRs)
+
+### Рекурсивное сравнение
+[![asciicast](https://asciinema.org/a/704382.svg)](https://asciinema.org/a/704382)
