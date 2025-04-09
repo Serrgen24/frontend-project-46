@@ -5,26 +5,21 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     
     - name: Setup Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v1
       with:
-        node-version: '20'
+        node-version: '14'
     
     - name: Install dependencies
       run: npm install
       
     - name: Run tests with coverage
-      run: |
-        npm run coverage
-        ls -la coverage/ # Для отладки - проверяем наличие файлов
-    
-    - name: Upload to Code Climate
-      uses: paambaati/codeclimate-action@v5.0.0
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      run: npm run coverage
+      
+    - name: Upload coverage to QLTY
+      uses: qltysh/qlty-action/coverage@main
       with:
-        coverageCommand: npm run coverage
-        coverageLocations: ${{ github.workspace }}/coverage/lcov.info:lcov
-        debug: true
+        coverage-token: ${{ secrets.CC_TEST_REPORTER_ID }}
+        files: coverage/lcov.info
