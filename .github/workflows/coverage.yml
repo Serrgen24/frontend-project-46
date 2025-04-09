@@ -21,5 +21,5 @@ jobs:
     - name: Upload coverage to QLTY
       uses: qltysh/qlty-action/coverage@main
       with:
-        coverage-token: ${{ secrets.CC_TEST_REPORTER_ID }}
+        coverage-token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
         files: coverage/lcov.info
