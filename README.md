@@ -4,7 +4,7 @@
 [![linter](https://github.com/Serrgen24/frontend-project-46/actions/workflows/linter.yml/badge.svg)](https://github.com/Serrgen24/frontend-project-46/actions/workflows/linter.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d0554512ae29ce5c4a34/maintainability)](https://codeclimate.com/github/Serrgen24/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d0554512ae29ce5c4a34/test_coverage)](https://codeclimate.com/github/Serrgen24/frontend-project-46/test_coverage)
-
+[![Code Coverage](https://qlty.sh/badges/797c3bbc-c86b-4e6b-b25b-a277f0333424/test_coverage.svg)](https://qlty.sh/gh/Serrgen24/projects/frontend-project-46)
 
 ## Описание
 Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения которой существует множество онлайн сервисов, например [JSON Diff](http://www.jsondiff.com/). Подобный механизм используется при выводе тестов или при автоматическом отслеживании изменений в конфигурационных файлах.

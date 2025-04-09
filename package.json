@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage --coverageReporters=text-lcov",
+    "coverage": "jest --coverage --coverageReporters=text-lcov --coverageReporters=lcov --coverageDirectory=coverage",
     "lint": "eslint ."
   },
   "dependencies": {
