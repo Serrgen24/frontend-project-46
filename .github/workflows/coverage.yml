@@ -15,9 +15,11 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Generate coverage
-      run: npm run coverage
-      
+    - name: Run tests with coverage
+      run: |
+        npm run coverage
+        ls -la coverage/ # Для отладки - проверяем наличие файлов
+    
     - name: Upload to Code Climate
       uses: paambaati/codeclimate-action@v5.0.0
       env:
@@ -25,3 +27,4 @@ jobs:
       with:
         coverageCommand: npm run coverage
         coverageLocations: ${{ github.workspace }}/coverage/lcov.info:lcov
+        debug: true
