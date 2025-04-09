@@ -5,12 +5,12 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Setup Node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: '20'
     
     - name: Install dependencies
       run: npm install
@@ -18,7 +18,9 @@ jobs:
     - name: Run tests with coverage
       run: npm run coverage
       
-    - name: Code Climate
+    - name: Upload to Code Climate
       uses: paambaati/codeclimate-action@v5.0.0
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      with:
+        coverageLocations: ${{ github.workspace }}/coverage/lcov.info:lcov

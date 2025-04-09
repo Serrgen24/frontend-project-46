@@ -18,8 +18,8 @@
     "gendiff": "./bin/gendiff.js"
   },
   "scripts": {
-    "test": "jest --coverage",
-    "coverage": "nyc --reporter=lcov npm test",
+    "test": "jest",
+    "coverage": "jest --coverage --coverageReporters=text-lcov",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -35,7 +35,6 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^15.15.0",
-    "jest": "^29.7.0",
-    "nyc": "^17.1.0"
+    "jest": "^29.7.0"
   }
 }
