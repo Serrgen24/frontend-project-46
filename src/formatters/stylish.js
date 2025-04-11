@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const getSpace = (depth) => ' '.repeat(depth * 4);
+const getSpace = (depth) => ' '.repeat(depth * 2);
 
 const stringify = (value, depth) => {
   if (!_.isObject(value)) {
