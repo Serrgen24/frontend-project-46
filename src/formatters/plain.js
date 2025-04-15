@@ -10,20 +10,18 @@ const stringify = (value) => {
 
 const formatPlain = (diff, parentKey = '') => {
   const lines = diff.flatMap((node) => {
-    const {
-      key, type, value, oldValue, newValue, children,
-    } = node;
+    const { key, type } = node;
     const fullKey = parentKey ? `${parentKey}.${key}` : key;
 
     switch (type) {
       case 'added':
-        return `Property '${fullKey}' was added with value: ${stringify(value)}`;
+        return `Property '${fullKey}' was added with value: ${stringify(node.value)}`;
       case 'deleted':
         return `Property '${fullKey}' was removed`;
       case 'changed':
-        return `Property '${fullKey}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}`;
+        return `Property '${fullKey}' was updated. From ${stringify(node.oldValue)} to ${stringify(node.newValue)}`;
       case 'nested':
-        return formatPlain(children, fullKey);
+        return formatPlain(node.children, fullKey);
       case 'unchanged':
         return [];
       default:
