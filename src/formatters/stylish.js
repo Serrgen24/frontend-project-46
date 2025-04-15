@@ -1,22 +1,22 @@
 import _ from 'lodash';
 
-const getSpace = (depth, spaceCount = 4) => ' '.repeat(depth * spaceCount);
+const getSpace = (depth, spaceCount = 4) => ' '.repeat(depth * spaceCount - 2);
 
 const stringify = (value, depth) => {
   if (!_.isObject(value)) {
-    return value;
+    return String(value);
   }
 
   const entries = Object.entries(value);
   const lines = entries.map(([key, val]) => {
-    const currentIndent = getSpace(depth + 1);
-    return `${currentIndent}  ${key}: ${stringify(val, depth + 1)}`;
+    const currentIndent = ' '.repeat(depth * 4);
+    return `${currentIndent}${key}: ${stringify(val, depth + 1)}`;
   });
 
-  return `{\n${lines.join('\n')}\n${getSpace(depth)}}`;
+  return `{\n${lines.join('\n')}\n${' '.repeat((depth - 1) * 4)}}`;
 };
 
-const stylish = (diff, depth = 0) => {
+const stylish = (diff, depth = 1) => {
   const lines = diff.map((node) => {
     const indent = getSpace(depth);
     const {
@@ -42,7 +42,7 @@ const stylish = (diff, depth = 0) => {
     }
   });
 
-  return `{\n${lines.join('\n')}\n${getSpace(depth)}}`;
+  return `{\n${lines.join('\n')}\n${' '.repeat((depth - 1) * 4)}}`;
 };
 
 export default stylish;
